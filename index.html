@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exosome Research Hub</title>
+    <!-- External Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/htmx/1.9.10/htmx.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.3.0/mermaid.min.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <strong>ExoRNA Hub</strong>
+            </a>
+            
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">Home</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">Diseases</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="syndrom_metab.html">Syndrome métabolique</a>
+                        <a class="navbar-item" href="steatose.html">Stéatose hépatique</a>
+                        <a class="navbar-item" href="obesity.html">Obesity</a>
+                        <a class="navbar-item" href="pancreatic-cancer.html">Pancreatic Cancer</a>
+                        <a class="navbar-item" href="diabetes.html">Diabetes</a>
+                    </div>
+                </div>
+                <a class="navbar-item" href="stat.html">STAT</a>
+                <a class="navbar-item" href="rna-analysis.html">RNA Analysis</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">Exosome Research Hub</h1>
+                <h2 class="subtitle">Exploring the Role of Exosomes in Metabolic Diseases</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <!-- Overview Column -->
+                <div class="column is-8">
+                    <div class="content">
+                        <h3 class="title is-4">Aperçu des axes de recherche sur le cancer du pancréas</h3>
+                        <div class="block">
+
+                            <img src="static/images/pancreas_picture.jpg" alt="pancreas_picture"/>
+
+
+                            <p>L'obésité et le diabète contribuent au développement du cancer du pancréas à travers plusieurs mécanismes interconnectés :</p>
+                            
+                            <ul>
+                                <li>
+                                    <strong>Perturbations Métaboliques :</strong>
+                                    <ul>
+                                        <li>L'excès de nutriments et de métabolites (lipides, glucose, acides biliaires) crée un environnement favorable au cancer</li>
+                                        <li>Le métabolisme altéré conduit à des dommages de l'ADN et au stress cellulaire</li>
+                                        <li>Les produits de glycation avancée (AGE) s'accumulent et favorisent l'inflammation</li>
+                                    </ul>
+                                </li>
+                                
+                                <li>
+                                    <strong>Déséquilibres Hormonaux :</strong>
+                                    <ul>
+                                        <li>L'insulinorésistance et l'hyperinsulinémie activent des voies favorisant le cancer</li>
+                                        <li>La perturbation des hormones gastro-intestinales comme la gastrine et la cholécystokinine affecte la fonction pancréatique</li>
+                                        <li>La dérégulation des hormones sexuelles contribue au risque de cancer</li>
+                                    </ul>
+                                </li>
+                                
+                                <li>
+                                    <strong>Modifications du Microbiome :</strong>
+                                    <ul>
+                                        <li>L'obésité et le diabète altèrent la composition des bactéries intestinales</li>
+                                        <li>Le microbiome modifié favorise l'inflammation</li>
+                                        <li>Les métabolites et toxines bactériennes peuvent endommager le tissu pancréatique</li>
+                                    </ul>
+                                </li>
+                                
+                                <li>
+                                    <strong>Effets sur le Microenvironnement Tumoral :</strong>
+                                    <ul>
+                                        <li>Augmentation de l'inflammation et du stress oxydatif</li>
+                                        <li>Infiltration anormale des cellules immunitaires</li>
+                                        <li>Fibrose accrue et remodelage tissulaire</li>
+                                        <li>Perturbation de la matrice extracellulaire</li>
+                                    </ul>
+                                </li>
+                                
+                                <li>
+                                    <strong>Processus Cellulaires :</strong>
+                                    <ul>
+                                        <li>Dysfonctionnement de l'autophagie</li>
+                                        <li>Stress du réticulum endoplasmique</li>
+                                        <li>Transition épithélio-mésenchymateuse</li>
+                                        <li>Sécrétion anormale d'exosomes</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <p>La revue souligne comment ces mécanismes forment un réseau complexe où chaque facteur peut en amplifier d'autres, créant des conditions favorables à l'initiation et à la progression du cancer du pancréas. Comprendre ces interconnexions est crucial pour développer des stratégies de prévention et des traitements.</p>
+                            
+                            <p>Ce travail met en évidence trois implications majeures pour le domaine :</p>
+                            <ul>
+                                <li>Opportunités de prévention par une meilleure gestion de l'obésité et du diabète</li>
+                                <li>Nécessité de méthodes de détection précoce dans les populations à haut risque</li>
+                                <li>Cibles thérapeutiques potentielles basées sur ces mécanismes moléculaires</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Interactive Visualization -->
+                        <div class="box visualization-container">
+                            <div class="mermaid">
+                                graph TB
+                                    Exosomes[Exosomes] --> Obesity
+                                    Exosomes --> PancreaticCancer[Pancreatic Cancer]
+                                    Exosomes --> Diabetes
+                                    
+                                    subgraph RNA_Content[RNA Content Analysis]
+                                        miRNA[miRNA]
+                                        circRNA[circRNA]
+                                        lncRNA[lncRNA]
+                                    end
+
+                                    Obesity --> RNA_Content
+                                    PancreaticCancer --> RNA_Content
+                                    Diabetes --> RNA_Content
+
+                                    miRNA --> GeneRegulation[Gene Regulation]
+                                    circRNA --> MetabolicPathways[Metabolic Pathways]
+                                    lncRNA --> CellularProcesses[Cellular Processes]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="column is-4">
+                    <div class="box">
+                        <h4 class="title is-5">Quick Links</h4>
+                        <div class="buttons are-medium">
+                            <button class="button is-fullwidth is-link is-light mb-2"
+                                    hx-get="/api/latest-obesity"
+                                    hx-target="#research-updates">
+                                
+                                <a href="adipocytes.html">Rôle des adipocytes dans le cancer</a>
+                            </button>
+                            <button class="button is-fullwidth is-link is-light mb-2"
+                                    hx-get="/api/latest-obesity"
+                                    hx-target="#research-updates">
+                                Latest Obesity Research
+                            </button>
+                            <button class="button is-fullwidth is-link is-light mb-2"
+                                    hx-get="/api/latest-cancer"
+                                    hx-target="#research-updates">
+                                Latest Cancer Findings
+                            </button>
+                            <button class="button is-fullwidth is-link is-light"
+                                    hx-get="/api/latest-diabetes"
+                                    hx-target="#research-updates">
+                                Latest Diabetes Studies
+                            </button>
+                        </div>
+                        
+                        <!-- HTMX Target for Dynamic Updates -->
+                        <div id="research-updates" class="mt-4">
+                            <!-- Content will be loaded here via HTMX -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize Mermaid
+        mermaid.initialize({ startOnLoad: true });
+
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.navbar-burger');
+            const menu = document.querySelector('.navbar-menu');
+            
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('is-active');
+                menu.classList.toggle('is-active');
+            });
+        });
+    </script>
+</body>
+</html>

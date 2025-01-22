@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNA Analysis - Exosome Research Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/htmx/1.9.10/htmx.min.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Navigation Bar (same as index.html) -->
+    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+        <!-- Navigation content same as index.html -->
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero is-info">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">RNA Analysis</h1>
+                <h2 class="subtitle">Exploring miRNA, circRNA, and lncRNA in Exosomes</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <!-- RNA Type Tabs -->
+            <div class="tabs is-large is-centered">
+                <ul>
+                    <li class="is-active" data-target="mirna-content">
+                        <a>miRNA</a>
+                    </li>
+                    <li data-target="circrna-content">
+                        <a>circRNA</a>
+                    </li>
+                    <li data-target="lncrna-content">
+                        <a>lncRNA</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- RNA Content Sections -->
+            <div id="rna-content-container">
+                <!-- miRNA Section -->
+                <div id="mirna-content" class="content-section">
+                    <div class="columns">
+                        <div class="column is-8">
+                            <div class="content">
+                                <h3 class="title is-4">microRNA (miRNA) Analysis</h3>
+                                <p class="block">
+                                    MicroRNAs play crucial roles in post-transcriptional regulation of gene expression.
+                                    In exosomes, they serve as important biomarkers and therapeutic targets.
+                                </p>
+                                
+                                <!-- Interactive Data Table -->
+                                <div class="box">
+                                    <h4 class="title is-5">Key miRNA Findings</h4>
+                                    <table class="table is-fullwidth">
+                                        <thead>                                            
+                                            <tr>
+                                                <th>miRNA</th>
+                                                <th>Disease Association</th>
+                                                <th>Primary Functions/Effects</th>
+                                                <th>Expression</th>
+                                                <th>Key Findings</th>
+                                                <th>Details</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr hx-get="/api/mirna-details/1" 
+                                                hx-target="#rna-details" 
+                                                class="is-clickable">
+                                                <td>miR-21</td>
+                                                <td>Pancreatic Cancer, Inflammation</td>
+                                                <td>Upregulated</td>
+                                                <td><button class="button is-small">View</button></td>
+                                            </tr>
+                                            <tr hx-get="/api/mirna-details/1" 
+                                                hx-target="#rna-details" 
+                                                class="is-clickable">
+                                                <td>miR-34a</td>
+                                                <td>Pancreatic Cancer, Diabetes</td>
+                                                <td>Upregulated</td>
+                                                <td><button class="button is-small">View</button></td>
+                                            </tr>
+                                            <tr hx-get="/api/mirna-details/1" 
+                                                hx-target="#rna-details" 
+                                                class="is-clickable">
+                                                <td>miR-375</td>
+                                                <td>Diabetes, Pancreatic Cancer</td>
+                                                <td>Upregulated</td>
+                                                <td><button class="button is-small">View</button></td>
+                                            </tr>
+                                            <tr hx-get="/api/mirna-details/1" 
+                                                hx-target="#rna-details" 
+                                                class="is-clickable">
+                                                <td>miR-155</td>
+                                                <td>Inflammation, Fibrosis</td>
+                                                <td>Upregulated</td>
+                                                <td><button class="button is-small">View</button></td>
+                                            </tr>
+                                            <tr hx-get="/api/mirna-details/1" 
+                                                hx-target="#rna-details" 
+                                                class="is-clickable">
+                                                <td>miR-146a</td>
+                                                <td>Inflammation, Obesity</td>
+                                                <td>Upregulated</td>
+                                                <td><button class="button is-small">View</button></td>
+                                            </tr>
+                                            <tr hx-get="/api/mirna-details/1" 
+                                                hx-target="#rna-details" 
+                                                class="is-clickable">
+                                                <td>miR-29</td>
+                                                <td>Fibrosis, Diabetes</td>
+                                                <td>Upregulated</td>
+                                                <td><button class="button is-small">View</button></td>
+                                            </tr>
+                                            <tr hx-get="/api/mirna-details/1" 
+                                                hx-target="#rna-details" 
+                                                class="is-clickable">
+                                                <td>miR-200</td>
+                                                <td>Pancreatic Cancer, Fibrosis</td>
+                                                <td>Upregulated</td>
+                                                <td><button class="button is-small">View</button></td>
+                                            </tr>
+                                            <tr hx-get="/api/mirna-details/1" 
+                                                hx-target="#rna-details" 
+                                                class="is-clickable">
+                                                <td>miR-122</td>
+                                                <td>Obesity, Diabetes</td>
+                                                <td>Upregulated</td>
+                                                <td><button class="button is-small">View</button></td>
+                                            </tr>
+                                            <!-- Add more rows as needed -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Details Panel -->
+                        <div class="column is-4">
+                            <div class="box">
+                                <h4 class="title is-5">Details</h4>
+                                <div id="rna-details">
+                                    <!-- Content loaded via HTMX -->
+                                    <p class="has-text-grey">Select an RNA entry to view details</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- circRNA Section -->
+                <div id="circrna-content" class="content-section is-hidden">
+                    <!-- Similar structure to miRNA section -->
+                </div>
+
+                <!-- lncRNA Section -->
+                <div id="lncrna-content" class="content-section is-hidden">
+                    <!-- Similar structure to miRNA section -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Tab switching functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tabs li');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Update active tab
+                    tabs.forEach(t => t.classList.remove('is-active'));
+                    tab.classList.add('is-active');
+                    
+                    // Show corresponding content
+                    const target = tab.dataset.target;
+                    document.querySelectorAll('.content-section').forEach(section => {
+                        section.classList.add('is-hidden');
+                    });
+                    document.getElementById(target).classList.remove('is-hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

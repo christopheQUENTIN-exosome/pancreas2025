@@ -1,0 +1,106 @@
+/* Custom styles to enhance Bulma */
+
+/* Visualization container styling */
+.visualization-container {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 6px;
+    margin: 2rem 0;
+}
+
+/* Ensure Mermaid diagrams are responsive */
+.mermaid {
+    width: 100%;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+/* Add smooth transitions for tab content */
+.content-section {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.content-section.is-hidden {
+    display: none;
+}
+
+/* Enhanced table interactions */
+.table tr.is-clickable {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.table tr.is-clickable:hover {
+    background-color: #f0f0f0;
+}
+
+/* Custom hero gradients */
+.hero.is-primary {
+    background: linear-gradient(135deg, #00d1b2, #009e86);
+}
+
+.hero.is-info {
+    background: linear-gradient(135deg, #3298dc, #2793da);
+}
+
+/* Quick links section enhancements */
+.box .buttons .button {
+    transition: transform 0.2s ease;
+}
+
+.box .buttons .button:hover {
+    transform: translateX(5px);
+}
+
+/* Research updates section */
+#research-updates {
+    min-height: 100px;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+/* Loading states for HTMX */
+.htmx-indicator {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.htmx-request .htmx-indicator {
+    opacity: 1;
+}
+
+.htmx-request.htmx-indicator {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .hero-body {
+        padding: 2rem 1rem;
+    }
+    
+    .section {
+        padding: 2rem 1rem;
+    }
+    
+    .visualization-container {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar, 
+    .hero,
+    .buttons,
+    .is-clickable {
+        display: none;
+    }
+    
+    .box {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
